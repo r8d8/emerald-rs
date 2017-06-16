@@ -7,6 +7,7 @@ pub use self::rlp::{RLPList, WriteRLP};
 use byteorder::{BigEndian, ReadBytesExt, WriteBytesExt};
 use chrono::prelude::UTC;
 use std::io::Cursor;
+use rustc_serialize::hex::FromHex;
 use std::mem::transmute;
 
 static HEX_CHARS: &'static [u8] = b"0123456789abcdef";
@@ -152,14 +153,17 @@ pub fn timestamp() -> String {
         .to_string()
 }
 
+///
 pub fn to_16bytes(hex: &str) -> [u8; 16] {
     to_arr(&hex.from_hex().unwrap())
 }
 
+///
 pub fn to_20bytes(hex: &str) -> [u8; 20] {
     to_arr(&hex.from_hex().unwrap())
 }
 
+///
 pub fn to_32bytes(hex: &str) -> [u8; 32] {
     to_arr(&hex.from_hex().unwrap())
 }
