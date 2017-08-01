@@ -2,6 +2,8 @@ Emerald offline wallet command line interface.
 
 Usage:
   emerald server [options] [--port <port>] [--host <host>]
+  emerald get_account [options]
+  emerald send [options]
   emerald -V | --version
   emerald -h | --help
 

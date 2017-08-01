@@ -39,6 +39,8 @@ struct Args {
     flag_security_level: String,
     flag_chain: String,
     cmd_server: bool,
+    cmd_get_account: bool,
+    cmd_send: bool,
 }
 
 fn main() {
